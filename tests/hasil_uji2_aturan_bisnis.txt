@@ -272,8 +272,8 @@ Jumlah dokter    : 3 / 5 (Aktif: 2)
 Jumlah kunjungan : 6 / 30 (Menunggu: 5, Selesai: 0, Batal: 1)
 Total pendapatan : Rp0 (dari kunjungan SELESAI)
 Kunjungan per dokter (tanpa yang batal):
-  D001 dr. Andi Pratama       : 5 kunjungan
-  D002 dr. Sari Dewi          : 0 kunjungan
+  D001 dr. Andi Pratama : 5 kunjungan
+  D002 dr. Sari Dewi : 0 kunjungan
   D003 dr. Budi Santoso, Sp.A : 0 kunjungan
 
 ================ MENU KLINIK RAWAT JALAN ================

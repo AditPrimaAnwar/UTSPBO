@@ -97,7 +97,10 @@ public class Klinik {
     /** @return semua pasien yang namanya mengandung kata kunci (tidak peka huruf besar/kecil) */
     public List<Pasien> cariPasienByNama(String kataKunci) {
         List<Pasien> hasil = new ArrayList<>();
-        String kunci = kataKunci == null ? "" : kataKunci.trim().toLowerCase();
+        String kunci = "";
+        if (kataKunci != null) {
+            kunci = kataKunci.trim().toLowerCase();
+        }
         for (int i = 0; i < daftarPasien.size(); i++) {
             Pasien p = daftarPasien.get(i);
             if (p.getNama().toLowerCase().contains(kunci)) {
@@ -131,7 +134,10 @@ public class Klinik {
     /** @return semua dokter yang nama atau spesialisnya mengandung kata kunci */
     public List<Dokter> cariDokterByNama(String kataKunci) {
         List<Dokter> hasil = new ArrayList<>();
-        String kunci = kataKunci == null ? "" : kataKunci.trim().toLowerCase();
+        String kunci = "";
+        if (kataKunci != null) {
+            kunci = kataKunci.trim().toLowerCase();
+        }
         for (int i = 0; i < daftarDokter.size(); i++) {
             Dokter d = daftarDokter.get(i);
             if (d.getNama().toLowerCase().contains(kunci) || d.getSpesialis().toLowerCase().contains(kunci)) {
@@ -266,19 +272,17 @@ public class Klinik {
             }
         }
 
-        StringBuilder sb = new StringBuilder();
-        sb.append("===== LAPORAN RINGKAS ").append(nama.toUpperCase()).append(" =====\n");
-        sb.append(String.format("Jumlah pasien    : %d / %d (BPJS: %d, Lansia: %d)%n",
-                daftarPasien.size(), daftarPasien.getKapasitas(), bpjs, lansia));
-        sb.append(String.format("Jumlah dokter    : %d / %d (Aktif: %d)%n",
-                daftarDokter.size(), daftarDokter.getKapasitas(), dokterAktif));
-        sb.append(String.format("Jumlah kunjungan : %d / %d (Menunggu: %d, Selesai: %d, Batal: %d)%n",
-                daftarKunjungan.size(), daftarKunjungan.getKapasitas(), menunggu, selesai, batal));
-        sb.append("Total pendapatan : ").append(formatRupiah(hitungTotalPendapatan()))
-                .append(" (dari kunjungan SELESAI)\n");
-        sb.append("Kunjungan per dokter (tanpa yang batal):\n");
+        String laporan = "===== LAPORAN RINGKAS " + nama.toUpperCase() + " =====\n";
+        laporan += "Jumlah pasien    : " + daftarPasien.size() + " / " + daftarPasien.getKapasitas()
+                + " (BPJS: " + bpjs + ", Lansia: " + lansia + ")\n";
+        laporan += "Jumlah dokter    : " + daftarDokter.size() + " / " + daftarDokter.getKapasitas()
+                + " (Aktif: " + dokterAktif + ")\n";
+        laporan += "Jumlah kunjungan : " + daftarKunjungan.size() + " / " + daftarKunjungan.getKapasitas()
+                + " (Menunggu: " + menunggu + ", Selesai: " + selesai + ", Batal: " + batal + ")\n";
+        laporan += "Total pendapatan : " + formatRupiah(hitungTotalPendapatan()) + " (dari kunjungan SELESAI)\n";
+        laporan += "Kunjungan per dokter (tanpa yang batal):\n";
         if (daftarDokter.isEmpty()) {
-            sb.append("  (belum ada dokter)\n");
+            laporan += "  (belum ada dokter)\n";
         }
         for (int i = 0; i < daftarDokter.size(); i++) {
             Dokter d = daftarDokter.get(i);
@@ -289,9 +293,9 @@ public class Klinik {
                     jumlah++;
                 }
             }
-            sb.append(String.format("  %s %-22s : %d kunjungan%n", d.getKodeDokter(), d.getNama(), jumlah));
+            laporan += "  " + d.getKodeDokter() + " " + d.getNama() + " : " + jumlah + " kunjungan\n";
         }
-        return sb.toString();
+        return laporan;
     }
 
     /** @return identitas klinik dalam satu baris */

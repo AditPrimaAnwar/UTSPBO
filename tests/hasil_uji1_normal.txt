@@ -48,11 +48,11 @@ Kode pasien (contoh P001): Nama pasien     : Umur (tahun)    : Alamat (boleh kos
 =========================================================
 Pilih menu: 
 --- Daftar Pasien (5/10, terurut berdasarkan kode) ---
-  [0] P001 | La Ode Ahmad           |  67 th (Lansia) | BPJS: Ya    | Telp: 081234567802  | Alamat: Jl. Ahmad Yani | Kunjungan: 0
-  [1] P002 | Siti Aminah            |   8 th (Anak  ) | BPJS: Tidak | Telp: 081234567803  | Alamat: Jl. Malaka | Kunjungan: 0
-  [2] P003 | Wa Ode Nurhaliza       |  25 th (Dewasa) | BPJS: Tidak | Telp: 081234567801  | Alamat: Jl. Saranani | Kunjungan: 0
-  [3] P004 | Ahmad Raihan           |  20 th (Dewasa) | BPJS: Tidak | Telp: 085211112222  | Alamat: Jl. Lepo-Lepo | Kunjungan: 0
-  [4] P005 | Rahmat Hidayat         |  72 th (Lansia) | BPJS: Tidak | Telp: 081234567804  | Alamat: Jl. Poros Bandara | Kunjungan: 0
+  [0] P001 | La Ode Ahmad | 67 th (Lansia) | BPJS: Ya | Telp: 081234567802 | Alamat: Jl. Ahmad Yani | Kunjungan: 0
+  [1] P002 | Siti Aminah | 8 th (Anak) | BPJS: Tidak | Telp: 081234567803 | Alamat: Jl. Malaka | Kunjungan: 0
+  [2] P003 | Wa Ode Nurhaliza | 25 th (Dewasa) | BPJS: Tidak | Telp: 081234567801 | Alamat: Jl. Saranani | Kunjungan: 0
+  [3] P004 | Ahmad Raihan | 20 th (Dewasa) | BPJS: Tidak | Telp: 085211112222 | Alamat: Jl. Lepo-Lepo | Kunjungan: 0
+  [4] P005 | Rahmat Hidayat | 72 th (Lansia) | BPJS: Tidak | Telp: 081234567804 | Alamat: Jl. Poros Bandara | Kunjungan: 0
 
 ================ MENU KLINIK RAWAT JALAN ================
  1. Tambah pasien
@@ -69,9 +69,9 @@ Pilih menu:
 =========================================================
 Pilih menu: 
 --- Daftar Dokter (3/5) ---
-  [0] D001 | dr. Andi Pratama       | Umum         | Tarif: Rp50.000   | Status: Aktif
-  [1] D002 | dr. Sari Dewi          | Gigi         | Tarif: Rp75.000   | Status: Aktif
-  [2] D003 | dr. Budi Santoso, Sp.A | Anak         | Tarif: Rp100.000  | Status: Nonaktif
+  [0] D001 | dr. Andi Pratama | Umum | Tarif: Rp50.000 | Status: Aktif
+  [1] D002 | dr. Sari Dewi | Gigi | Tarif: Rp75.000 | Status: Aktif
+  [2] D003 | dr. Budi Santoso, Sp.A | Anak | Tarif: Rp100.000 | Status: Nonaktif
 Ubah status aktif/nonaktif dokter? (y/t): 
 ================ MENU KLINIK RAWAT JALAN ================
  1. Tambah pasien
@@ -148,8 +148,8 @@ Pilih menu:
 3. Batalkan kunjungan
 0. Kembali
 Pilih: Kunjungan (2/30):
-  [0] K0001 | 2026-11-23 | P004 Ahmad Raihan       -> D001 dr. Andi Pratama   | Keluhan: Demam dan batuk | SELESAI  | Total: Rp75.000
-  [1] K0002 | 2026-12-01 | P001 La Ode Ahmad       -> D002 dr. Sari Dewi      | Keluhan: Sakit gigi      | MENUNGGU | Total: Rp37.500
+  [0] K0001 | 2026-11-23 | P004 Ahmad Raihan -> D001 dr. Andi Pratama | Keluhan: Demam dan batuk | SELESAI | Total: Rp75.000
+  [1] K0002 | 2026-12-01 | P001 La Ode Ahmad -> D002 dr. Sari Dewi | Keluhan: Sakit gigi | MENUNGGU | Total: Rp37.500
 
 ================ MENU KLINIK RAWAT JALAN ================
  1. Tambah pasien
@@ -171,8 +171,8 @@ Jumlah dokter    : 3 / 5 (Aktif: 2)
 Jumlah kunjungan : 2 / 30 (Menunggu: 1, Selesai: 1, Batal: 0)
 Total pendapatan : Rp75.000 (dari kunjungan SELESAI)
 Kunjungan per dokter (tanpa yang batal):
-  D001 dr. Andi Pratama       : 1 kunjungan
-  D002 dr. Sari Dewi          : 1 kunjungan
+  D001 dr. Andi Pratama : 1 kunjungan
+  D002 dr. Sari Dewi : 1 kunjungan
   D003 dr. Budi Santoso, Sp.A : 0 kunjungan
 
 ================ MENU KLINIK RAWAT JALAN ================

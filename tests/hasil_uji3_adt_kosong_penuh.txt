@@ -275,16 +275,16 @@ Pilih menu:
 5. tampilkan- tampilkan isi list
 6. size     - jumlah data, status kosong/penuh
 0. Kembali
-Pilih:   [0] P001 | La Ode Ahmad           |  67 th (Lansia) | BPJS: Ya    | Telp: 081234567802  | Alamat: Jl. Ahmad Yani | Kunjungan: 0
-  [1] P002 | Siti Aminah            |   8 th (Anak  ) | BPJS: Tidak | Telp: 081234567803  | Alamat: Jl. Malaka | Kunjungan: 0
-  [2] P003 | Wa Ode Nurhaliza       |  25 th (Dewasa) | BPJS: Tidak | Telp: 081234567801  | Alamat: Jl. Saranani | Kunjungan: 0
-  [3] P005 | Rahmat Hidayat         |  72 th (Lansia) | BPJS: Tidak | Telp: 081234567804  | Alamat: Jl. Poros Bandara | Kunjungan: 0
-  [4] P006 | Muh. Fadli             |  45 th (Dewasa) | BPJS: Ya    | Telp: -             | Alamat: - | Kunjungan: 0
-  [5] P007 | Dewi Lestari           |  33 th (Dewasa) | BPJS: Tidak | Telp: -             | Alamat: - | Kunjungan: 0
-  [6] P008 | Andi Rezky             |  19 th (Dewasa) | BPJS: Tidak | Telp: -             | Alamat: - | Kunjungan: 0
-  [7] P009 | Nur Aisyah             |  30 th (Dewasa) | BPJS: Tidak | Telp: -             | Alamat: - | Kunjungan: 0
-  [8] P010 | Irfan Maulana          |  50 th (Dewasa) | BPJS: Tidak | Telp: -             | Alamat: - | Kunjungan: 0
-  [9] P011 | Pasien Kesepuluh       |  22 th (Dewasa) | BPJS: Tidak | Telp: -             | Alamat: - | Kunjungan: 0
+Pilih:   [0] P001 | La Ode Ahmad | 67 th (Lansia) | BPJS: Ya | Telp: 081234567802 | Alamat: Jl. Ahmad Yani | Kunjungan: 0
+  [1] P002 | Siti Aminah | 8 th (Anak) | BPJS: Tidak | Telp: 081234567803 | Alamat: Jl. Malaka | Kunjungan: 0
+  [2] P003 | Wa Ode Nurhaliza | 25 th (Dewasa) | BPJS: Tidak | Telp: 081234567801 | Alamat: Jl. Saranani | Kunjungan: 0
+  [3] P005 | Rahmat Hidayat | 72 th (Lansia) | BPJS: Tidak | Telp: 081234567804 | Alamat: Jl. Poros Bandara | Kunjungan: 0
+  [4] P006 | Muh. Fadli | 45 th (Dewasa) | BPJS: Ya | Telp: - | Alamat: - | Kunjungan: 0
+  [5] P007 | Dewi Lestari | 33 th (Dewasa) | BPJS: Tidak | Telp: - | Alamat: - | Kunjungan: 0
+  [6] P008 | Andi Rezky | 19 th (Dewasa) | BPJS: Tidak | Telp: - | Alamat: - | Kunjungan: 0
+  [7] P009 | Nur Aisyah | 30 th (Dewasa) | BPJS: Tidak | Telp: - | Alamat: - | Kunjungan: 0
+  [8] P010 | Irfan Maulana | 50 th (Dewasa) | BPJS: Tidak | Telp: - | Alamat: - | Kunjungan: 0
+  [9] P011 | Pasien Kesepuluh | 22 th (Dewasa) | BPJS: Tidak | Telp: - | Alamat: - | Kunjungan: 0
 
 ================ MENU KLINIK RAWAT JALAN ================
  1. Tambah pasien
@@ -332,7 +332,7 @@ Pilih menu:
 5. tampilkan- tampilkan isi list
 6. size     - jumlah data, status kosong/penuh
 0. Kembali
-Pilih: Kode pasien: [OK] search: ditemukan pada index 5 -> P007 | Dewi Lestari           |  33 th (Dewasa) | BPJS: Tidak | Telp: -             | Alamat: - | Kunjungan: 0
+Pilih: Kode pasien: [OK] search: ditemukan pada index 5 -> P007 | Dewi Lestari | 33 th (Dewasa) | BPJS: Tidak | Telp: - | Alamat: - | Kunjungan: 0
 
 ================ MENU KLINIK RAWAT JALAN ================
  1. Tambah pasien
@@ -404,7 +404,7 @@ Pilih menu:
 5. tampilkan- tampilkan isi list
 6. size     - jumlah data, status kosong/penuh
 0. Kembali
-Pilih: Index (0 - 9): [OK] get(0) -> P001 | La Ode Ahmad           |  67 th (Lansia) | BPJS: Ya    | Telp: 081234567802  | Alamat: Jl. Ahmad Yani | Kunjungan: 0
+Pilih: Index (0 - 9): [OK] get(0) -> P001 | La Ode Ahmad | 67 th (Lansia) | BPJS: Ya | Telp: 081234567802 | Alamat: Jl. Ahmad Yani | Kunjungan: 0
 
 ================ MENU KLINIK RAWAT JALAN ================
  1. Tambah pasien

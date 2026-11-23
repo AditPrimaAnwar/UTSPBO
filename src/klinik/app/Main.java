@@ -118,8 +118,11 @@ public class Main {
             String kode = input.bacaTeksWajib("Kode dokter: ");
             boolean aktif = input.bacaYaTidak("Jadikan AKTIF? (t = nonaktif)");
             klinik.ubahStatusDokter(kode, aktif);
-            System.out.println("[OK] Status dokter " + kode.toUpperCase() + " diubah menjadi "
-                    + (aktif ? "Aktif" : "Nonaktif"));
+            if (aktif) {
+                System.out.println("[OK] Status dokter " + kode.toUpperCase() + " diubah menjadi Aktif");
+            } else {
+                System.out.println("[OK] Status dokter " + kode.toUpperCase() + " diubah menjadi Nonaktif");
+            }
         }
     }
 
@@ -189,42 +192,53 @@ public class Main {
         switch (pilihan) {
             case 1: {
                 Pasien p = klinik.cariPasien(input.bacaTeksWajib("Kode pasien: "));
-                System.out.println(p == null ? "[INFO] Pasien tidak ditemukan." : "Ditemukan: " + p);
+                if (p == null) {
+                    System.out.println("[INFO] Pasien tidak ditemukan.");
+                } else {
+                    System.out.println("Ditemukan: " + p);
+                }
                 break;
             }
             case 2: {
                 List<Pasien> hasil = klinik.cariPasienByNama(input.bacaTeksWajib("Nama (sebagian): "));
-                tampilkanHasilCari(hasil);
+                if (hasil.isEmpty()) {
+                    System.out.println("[INFO] Tidak ada pasien yang cocok.");
+                }
+                for (Pasien p : hasil) {
+                    System.out.println("  " + p);
+                }
                 break;
             }
             case 3: {
                 Dokter d = klinik.cariDokter(input.bacaTeksWajib("Kode dokter: "));
-                System.out.println(d == null ? "[INFO] Dokter tidak ditemukan." : "Ditemukan: " + d);
+                if (d == null) {
+                    System.out.println("[INFO] Dokter tidak ditemukan.");
+                } else {
+                    System.out.println("Ditemukan: " + d);
+                }
                 break;
             }
             case 4: {
                 List<Dokter> hasil = klinik.cariDokterByNama(input.bacaTeksWajib("Nama/spesialis (sebagian): "));
-                tampilkanHasilCari(hasil);
+                if (hasil.isEmpty()) {
+                    System.out.println("[INFO] Tidak ada dokter yang cocok.");
+                }
+                for (Dokter d : hasil) {
+                    System.out.println("  " + d);
+                }
                 break;
             }
             case 5: {
                 Kunjungan k = klinik.cariKunjungan(input.bacaTeksWajib("Kode kunjungan: "));
-                System.out.println(k == null ? "[INFO] Kunjungan tidak ditemukan." : "Ditemukan: " + k);
+                if (k == null) {
+                    System.out.println("[INFO] Kunjungan tidak ditemukan.");
+                } else {
+                    System.out.println("Ditemukan: " + k);
+                }
                 break;
             }
             default:
                 break;
-        }
-    }
-
-    private void tampilkanHasilCari(List<?> hasil) {
-        if (hasil.isEmpty()) {
-            System.out.println("[INFO] Tidak ada data yang cocok.");
-            return;
-        }
-        System.out.println("Ditemukan " + hasil.size() + " data:");
-        for (Object o : hasil) {
-            System.out.println("  " + o);
         }
     }
 
@@ -257,8 +271,11 @@ public class Main {
                 }
                 String kode = input.bacaTeksWajib("Kode pasien: ");
                 int index = list.search(kode);
-                System.out.println(index == -1 ? "[INFO] search: kode " + kode.toUpperCase() + " tidak ditemukan (-1)."
-                        : "[OK] search: ditemukan pada index " + index + " -> " + list.get(index));
+                if (index == -1) {
+                    System.out.println("[INFO] search: kode " + kode.toUpperCase() + " tidak ditemukan (-1).");
+                } else {
+                    System.out.println("[OK] search: ditemukan pada index " + index + " -> " + list.get(index));
+                }
                 break;
             }
             case 4: {
@@ -268,8 +285,11 @@ public class Main {
                 }
                 int index = input.bacaInt("Index (0 - " + (list.size() - 1) + "): ");
                 Pasien p = list.get(index);
-                System.out.println(p == null ? "[INFO] get: index " + index + " di luar jangkauan."
-                        : "[OK] get(" + index + ") -> " + p);
+                if (p == null) {
+                    System.out.println("[INFO] get: index " + index + " di luar jangkauan.");
+                } else {
+                    System.out.println("[OK] get(" + index + ") -> " + p);
+                }
                 break;
             }
             case 5:

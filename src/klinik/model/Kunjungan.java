@@ -104,10 +104,11 @@ public class Kunjungan implements MemilikiKunci {
 
     /** @return informasi kunjungan dalam satu baris */
     public String tampilkanInfo() {
-        return String.format("%s | %s | %s %-18s -> %s %-18s | Keluhan: %-15s | %-8s | Total: %s",
-                kodeKunjungan, tanggal, pasien.getKodePasien(), pasien.getNama(),
-                dokter.getKodeDokter(), dokter.getNama(), keluhan, status,
-                Klinik.formatRupiah(hitungTotalBiaya()));
+        return kodeKunjungan + " | " + tanggal
+                + " | " + pasien.getKodePasien() + " " + pasien.getNama()
+                + " -> " + dokter.getKodeDokter() + " " + dokter.getNama()
+                + " | Keluhan: " + keluhan + " | " + status
+                + " | Total: " + Klinik.formatRupiah(hitungTotalBiaya());
     }
 
     @Override

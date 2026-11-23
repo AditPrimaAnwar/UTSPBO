@@ -101,9 +101,13 @@ public class Pasien implements MemilikiKunci {
 
     /** @return informasi pasien dalam satu baris */
     public String tampilkanInfo() {
-        return String.format("%s | %-22s | %3d th (%-6s) | BPJS: %-5s | Telp: %-13s | Alamat: %s | Kunjungan: %d",
-                kodePasien, nama, umur, getKategoriUmur(), pesertaBpjs ? "Ya" : "Tidak",
-                noTelepon, alamat, jumlahKunjungan);
+        String bpjs = "Tidak";
+        if (pesertaBpjs) {
+            bpjs = "Ya";
+        }
+        return kodePasien + " | " + nama + " | " + umur + " th (" + getKategoriUmur() + ")"
+                + " | BPJS: " + bpjs + " | Telp: " + noTelepon + " | Alamat: " + alamat
+                + " | Kunjungan: " + jumlahKunjungan;
     }
 
     @Override
@@ -160,7 +164,11 @@ public class Pasien implements MemilikiKunci {
 
     /** Alamat boleh kosong; jika kosong disimpan sebagai "-". */
     public void setAlamat(String alamat) {
-        this.alamat = (alamat == null || alamat.isBlank()) ? "-" : alamat.trim();
+        if (alamat == null || alamat.isBlank()) {
+            this.alamat = "-";
+        } else {
+            this.alamat = alamat.trim();
+        }
     }
 
     public String getNoTelepon() {

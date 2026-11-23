@@ -69,9 +69,12 @@ public class Dokter implements MemilikiKunci {
 
     /** @return informasi dokter dalam satu baris */
     public String tampilkanInfo() {
-        return String.format("%s | %-22s | %-12s | Tarif: %-10s | Status: %s",
-                kodeDokter, nama, spesialis, Klinik.formatRupiah(tarifKonsultasi),
-                aktif ? "Aktif" : "Nonaktif");
+        String statusTeks = "Nonaktif";
+        if (aktif) {
+            statusTeks = "Aktif";
+        }
+        return kodeDokter + " | " + nama + " | " + spesialis
+                + " | Tarif: " + Klinik.formatRupiah(tarifKonsultasi) + " | Status: " + statusTeks;
     }
 
     @Override
@@ -115,7 +118,11 @@ public class Dokter implements MemilikiKunci {
 
     /** Spesialis boleh kosong; jika kosong dianggap dokter "Umum". */
     public void setSpesialis(String spesialis) {
-        this.spesialis = (spesialis == null || spesialis.isBlank()) ? "Umum" : spesialis.trim();
+        if (spesialis == null || spesialis.isBlank()) {
+            this.spesialis = "Umum";
+        } else {
+            this.spesialis = spesialis.trim();
+        }
     }
 
     public double getTarifKonsultasi() {
