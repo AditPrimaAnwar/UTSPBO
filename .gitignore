@@ -1,0 +1,12 @@
+# Hasil kompilasi Java (tidak boleh di-commit)
+*.class
+bin/
+out/
+build/
+
+# File IDE / sistem
+.vscode/
+.idea/
+*.iml
+Thumbs.db
+.DS_Store
