@@ -1,0 +1,9 @@
+10
+1
+P001
+Pasien Duplikat
+30
+
+
+t
+0

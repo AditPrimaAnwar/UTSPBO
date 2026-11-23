@@ -31,8 +31,13 @@ public class InputHelper {
             System.out.println("Input berakhir. Program ditutup.");
             System.exit(0);
         }
-        // buang karakter BOM (﻿) yang kadang ikut jika input berasal dari file
-        return scanner.nextLine().replace("﻿", "").trim();
+        // buang karakter BOM (kode 0xFEFF) yang kadang ikut jika input berasal dari file
+        String teks = scanner.nextLine().replace(String.valueOf((char) 0xFEFF), "").trim();
+        // mode demo/uji: input dari file tidak tampil di layar, jadi dicetak ulang
+        if (Boolean.getBoolean("klinik.echo")) {
+            System.out.println(teks);
+        }
+        return teks;
     }
 
     /** Membaca teks yang tidak boleh kosong; diulang sampai pengguna mengisi. */

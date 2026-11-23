@@ -1,0 +1,51 @@
+10
+1
+P006
+Muh. Fadli
+45
+
+
+t
+1
+P007
+Dewi Lestari
+33
+
+
+t
+1
+P008
+Andi Rezky
+19
+
+
+t
+1
+P009
+Nur Aisyah
+30
+
+
+t
+1
+P010
+Irfan Maulana
+50
+
+
+t
+1
+P011
+Rina Wati
+22
+
+
+t
+1
+P012
+Pasien Kesebelas
+28
+
+
+t
+0

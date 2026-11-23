@@ -332,7 +332,102 @@ Input uji disimpan di folder `tests/uji*.txt`, dan keluarannya di `tests/hasil_u
 | 14 | Input tidak valid: huruf pada kolom angka | Menu "abc", umur "dua puluh", tarif "lima puluh ribu", biaya "seribu" | Diminta mengulang | `[!] Input harus berupa angka ..., silakan ulangi.` | Lulus |
 | 15 | Input tidak valid: kosong dan format salah | Kode/nama kosong, tanggal "23-11-2026", telepon "abc", kode "X12", tarif −5000 | Diminta mengulang atau ditolak | `[!] Input tidak boleh kosong`, `[!] Format tanggal salah`, `[GAGAL] Nomor telepon harus 8-15 digit`, `[GAGAL] Kode pasien harus berformat P + 3 angka`, `[GAGAL] Tarif konsultasi harus lebih dari 0` | Lulus |
 
-> [Tempel screenshot setiap skenario di sini]
+### Tangkapan layar
+
+Setiap gambar adalah jendela terminal asli saat program dijalankan dengan input skenario dari `tests/screenshot/` (opsi `-Dklinik.echo=true` menampilkan ulang input yang dibaca).
+
+**Skenario 1 - tambah pasien (P004 masuk terurut)**
+
+![Skenario 1 - tambah pasien (P004 masuk terurut)](screenshot/01_normal_tambah_pasien.png)
+
+**Skenario 2 - buat kunjungan**
+
+![Skenario 2 - buat kunjungan](screenshot/02_normal_buat_kunjungan.png)
+
+**Skenario 3 - selesaikan kunjungan dan laporan**
+
+![Skenario 3 - selesaikan kunjungan dan laporan](screenshot/03_normal_selesaikan_laporan.png)
+
+**Skenario 4 - potongan BPJS**
+
+![Skenario 4 - potongan BPJS](screenshot/04_normal_potongan_bpjs.png)
+
+**Skenario 5 - umur 130 ditolak**
+
+![Skenario 5 - umur 130 ditolak](screenshot/05_aturan_umur_130.png)
+
+**Skenario 6 - kunjungan ke-6 dokter ditolak**
+
+![Skenario 6 - kunjungan ke-6 dokter ditolak](screenshot/06_aturan_kuota_dokter_5.png)
+
+**Skenario 7 - dokter nonaktif**
+
+![Skenario 7 - dokter nonaktif](screenshot/07_aturan_dokter_nonaktif.png)
+
+**Skenario 8 - kode pasien ganda**
+
+![Skenario 8 - kode pasien ganda](screenshot/08_aturan_kode_ganda.png)
+
+**Skenario 9 - menyelesaikan kunjungan yang sudah batal**
+
+![Skenario 9 - menyelesaikan kunjungan yang sudah batal](screenshot/09_aturan_kunjungan_batal.png)
+
+**Skenario 10 - hapus pasien yang masih menunggu**
+
+![Skenario 10 - hapus pasien yang masih menunggu](screenshot/10_aturan_hapus_pasien_menunggu.png)
+
+**Skenario 11a - size saat list kosong**
+
+![Skenario 11a - size saat list kosong](screenshot/11a_adt_kosong_size.png)
+
+**Skenario 11b - remove saat list kosong**
+
+![Skenario 11b - remove saat list kosong](screenshot/11b_adt_kosong_remove.png)
+
+**Skenario 11c - get saat list kosong**
+
+![Skenario 11c - get saat list kosong](screenshot/11c_adt_kosong_search_get.png)
+
+**Skenario 12a - tambah pasien ke-11 ditolak (PENUH)**
+
+![Skenario 12a - tambah pasien ke-11 ditolak (PENUH)](screenshot/12a_adt_penuh_tambah_ditolak.png)
+
+**Skenario 12b - size saat penuh (isFull = true)**
+
+![Skenario 12b - size saat penuh (isFull = true)](screenshot/12b_adt_penuh_size.png)
+
+**Skenario 13a - search kode tidak ada (-1)**
+
+![Skenario 13a - search kode tidak ada (-1)](screenshot/13a_adt_search_tidak_ditemukan.png)
+
+**Skenario 13b - get index di luar jangkauan**
+
+![Skenario 13b - get index di luar jangkauan](screenshot/13b_adt_get_di_luar_jangkauan.png)
+
+**Skenario 14a - huruf pada pilihan menu dan umur**
+
+![Skenario 14a - huruf pada pilihan menu dan umur](screenshot/14a_input_huruf_menu_umur.png)
+
+**Skenario 14b - huruf pada tarif**
+
+![Skenario 14b - huruf pada tarif](screenshot/14b_input_huruf_tarif.png)
+
+**Skenario 15a - kode kosong dan format kode salah**
+
+![Skenario 15a - kode kosong dan format kode salah](screenshot/15a_input_kode_kosong_salah.png)
+
+**Skenario 15b - nomor telepon salah**
+
+![Skenario 15b - nomor telepon salah](screenshot/15b_input_telepon_salah.png)
+
+**Skenario 15c - format tanggal salah**
+
+![Skenario 15c - format tanggal salah](screenshot/15c_input_tanggal_salah.png)
+
+**Skenario 15d - tarif negatif**
+
+![Skenario 15d - tarif negatif](screenshot/15d_input_tarif_negatif.png)
+
 
 ---
 
