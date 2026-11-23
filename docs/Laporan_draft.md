@@ -85,7 +85,7 @@ ketiga entitas mengimplementasikan interface `MemilikiKunci`, dan method `toStri
 ### 2.1 Class diagram
 File sumber: `docs/class-diagram.drawio` (buka di https://app.diagrams.net, lalu ekspor sebagai PNG dan tempel di sini).
 
-> [Tempel gambar class diagram di sini]
+![Class Diagram](class-diagram.png)
 
 Ringkasan relasi (versi teks):
 

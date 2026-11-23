@@ -1,0 +1,230 @@
+classDiagram
+    direction TB
+
+    class MemilikiKunci {
+        <<interface>>
+        +getKunci() String
+    }
+
+    class SortedList~T~ {
+        <<ADT, T extends MemilikiKunci>>
+        -KAPASITAS_DEFAULT: int = 10$
+        -data: Object[]
+        -kapasitas: int
+        -jumlah: int
+        +SortedList()
+        +SortedList(kapasitas: int)
+        +insert(item: T) boolean
+        +remove(kunci: String) T
+        +search(kunci: String) int
+        +get(index: int) T
+        +tampilkan() void
+        +size() int
+        +isEmpty() boolean
+        +isFull() boolean
+        +getKapasitas() int
+        -bandingkan(a: String, b: String) int
+        -ambil(index: int) T
+    }
+
+    class Klinik {
+        -KAPASITAS_PASIEN: int = 10$
+        -KAPASITAS_DOKTER: int = 5$
+        -KAPASITAS_KUNJUNGAN: int = 30$
+        -LOCALE_ID: Locale$
+        -nama: String
+        -alamat: String
+        -noTelepon: String
+        -daftarPasien: SortedList~Pasien~
+        -daftarDokter: SortedList~Dokter~
+        -daftarKunjungan: SortedList~Kunjungan~
+        -nomorKunjunganBerikutnya: int
+        +Klinik()
+        +Klinik(nama: String, alamat: String, noTelepon: String)
+        +tambahPasien(pasien: Pasien) void
+        +hapusPasien(kodePasien: String) Pasien
+        +cariPasien(kodePasien: String) Pasien
+        +cariPasienByNama(kataKunci: String) List~Pasien~
+        +tambahDokter(dokter: Dokter) void
+        +cariDokter(kodeDokter: String) Dokter
+        +cariDokterByNama(kataKunci: String) List~Dokter~
+        +ubahStatusDokter(kodeDokter: String, aktif: boolean) void
+        +buatKunjungan(kodePasien: String, kodeDokter: String, tanggal: LocalDate, keluhan: String) Kunjungan
+        +selesaikanKunjungan(kodeKunjungan: String, biayaObat: double) Kunjungan
+        +batalkanKunjungan(kodeKunjungan: String) Kunjungan
+        +cariKunjungan(kodeKunjungan: String) Kunjungan
+        +hitungKunjunganDokter(dokter: Dokter, tanggal: LocalDate) int
+        +hitungTotalPendapatan() double
+        +buatLaporan() String
+        +tampilkanInfo() String
+        +muatDataContoh() int
+        +formatRupiah(nilai: double)$ String
+        -buatKodeKunjungan() String
+        -cariKunjunganWajib(kodeKunjungan: String) Kunjungan
+        +getNama() String
+        +setNama(nama: String) void
+        +getAlamat() String
+        +setAlamat(alamat: String) void
+        +getNoTelepon() String
+        +setNoTelepon(noTelepon: String) void
+        +getDaftarPasien() SortedList~Pasien~
+        +getDaftarDokter() SortedList~Dokter~
+        +getDaftarKunjungan() SortedList~Kunjungan~
+    }
+
+    class Pasien {
+        -UMUR_MIN: int = 0$
+        -UMUR_MAX: int = 120$
+        -UMUR_LANSIA: int = 60$
+        -POTONGAN_BPJS: double = 0.50$
+        -POTONGAN_LANSIA: double = 0.20$
+        -POLA_KODE: String$
+        -POLA_TELEPON: String$
+        -kodePasien: String
+        -nama: String
+        -umur: int
+        -alamat: String
+        -noTelepon: String
+        -pesertaBpjs: boolean
+        -jumlahKunjungan: int
+        +Pasien()
+        +Pasien(kodePasien: String, nama: String, umur: int)
+        +Pasien(kodePasien: String, nama: String, umur: int, alamat: String, noTelepon: String, pesertaBpjs: boolean)
+        +getKategoriUmur() String
+        +isLansia() boolean
+        +hitungPersenPotongan() double
+        +tambahKunjungan() void
+        +tampilkanInfo() String
+        +getKunci() String
+        +toString() String
+        +getKodePasien() String
+        +setKodePasien(kodePasien: String) void
+        +getNama() String
+        +setNama(nama: String) void
+        +getUmur() int
+        +setUmur(umur: int) void
+        +getAlamat() String
+        +setAlamat(alamat: String) void
+        +getNoTelepon() String
+        +setNoTelepon(noTelepon: String) void
+        +isPesertaBpjs() boolean
+        +setPesertaBpjs(pesertaBpjs: boolean) void
+        +getJumlahKunjungan() int
+    }
+
+    class Dokter {
+        -MAKS_KUNJUNGAN_PER_HARI: int = 5$
+        -POLA_KODE: String$
+        -kodeDokter: String
+        -nama: String
+        -spesialis: String
+        -tarifKonsultasi: double
+        -aktif: boolean
+        +Dokter()
+        +Dokter(kodeDokter: String, nama: String, spesialis: String, tarifKonsultasi: double)
+        +Dokter(kodeDokter: String, nama: String, spesialis: String, tarifKonsultasi: double, aktif: boolean)
+        +bisaMenerimaKunjungan(jumlahKunjunganHariItu: int) boolean
+        +hitungSisaKuota(jumlahKunjunganHariItu: int) int
+        +ubahStatus(aktif: boolean) void
+        +getMaksKunjunganPerHari() int
+        +tampilkanInfo() String
+        +getKunci() String
+        +toString() String
+        +getKodeDokter() String
+        +setKodeDokter(kodeDokter: String) void
+        +getNama() String
+        +setNama(nama: String) void
+        +getSpesialis() String
+        +setSpesialis(spesialis: String) void
+        +getTarifKonsultasi() double
+        +setTarifKonsultasi(tarifKonsultasi: double) void
+        +isAktif() boolean
+        +setAktif(aktif: boolean) void
+    }
+
+    class Kunjungan {
+        -STATUS_MENUNGGU: String$
+        -STATUS_SELESAI: String$
+        -STATUS_BATAL: String$
+        -POLA_KODE: String$
+        -kodeKunjungan: String
+        -pasien: Pasien
+        -dokter: Dokter
+        -tanggal: LocalDate
+        -keluhan: String
+        -biayaObat: double
+        -status: String
+        +Kunjungan()
+        +Kunjungan(kodeKunjungan: String, pasien: Pasien, dokter: Dokter, tanggal: LocalDate, keluhan: String)
+        +hitungBiayaKonsultasi() double
+        +hitungTotalBiaya() double
+        +selesaikan(biayaObat: double) void
+        +batalkan() void
+        +isMenunggu() boolean
+        +isSelesai() boolean
+        +isBatal() boolean
+        +isAktifUntuk(dokter: Dokter, tanggal: LocalDate) boolean
+        +tampilkanInfo() String
+        +getKunci() String
+        +toString() String
+        +getKodeKunjungan() String
+        +setKodeKunjungan(kodeKunjungan: String) void
+        +getPasien() Pasien
+        +setPasien(pasien: Pasien) void
+        +getDokter() Dokter
+        +setDokter(dokter: Dokter) void
+        +getTanggal() LocalDate
+        +setTanggal(tanggal: LocalDate) void
+        +getKeluhan() String
+        +setKeluhan(keluhan: String) void
+        +getBiayaObat() double
+        +setBiayaObat(biayaObat: double) void
+        +getStatus() String
+    }
+
+    class Main {
+        -klinik: Klinik
+        -input: InputHelper
+        +Main()
+        +main(args: String[])$ void
+        +jalankan() void
+        -tampilkanMenuUtama() void
+        -menuTambahPasien() void
+        -menuTampilkanPasien() void
+        -menuTambahDokter() void
+        -menuTampilkanDokter() void
+        -menuBuatKunjungan() void
+        -menuKelolaKunjungan() void
+        -menuCariData() void
+        -tampilkanHasilCari(hasil: List) void
+        -menuOperasiAdt() void
+        -menuDataContoh() void
+    }
+
+    class InputHelper {
+        -scanner: Scanner
+        +InputHelper()
+        +InputHelper(scanner: Scanner)
+        +bacaBaris(prompt: String) String
+        +bacaTeksWajib(prompt: String) String
+        +bacaInt(prompt: String) int
+        +bacaInt(prompt: String, min: int, max: int) int
+        +bacaDouble(prompt: String) double
+        +bacaYaTidak(prompt: String) boolean
+        +bacaTanggal(prompt: String) LocalDate
+    }
+
+    Main "1" --> "1" Klinik : mengelola
+    Main "1" --> "1" InputHelper : membaca input
+    Main ..> Pasien : create
+    Main ..> Dokter : create
+    Klinik "1" o-- "0..10" Pasien : mendaftarkan
+    Klinik "1" o-- "0..5" Dokter : mempekerjakan
+    Klinik "1" *-- "0..30" Kunjungan : mencatat
+    Klinik "1" *-- "3" SortedList : menyimpan data
+    Kunjungan "0..*" --> "1" Pasien : milik pasien
+    Kunjungan "0..*" --> "1" Dokter : ditangani oleh
+    MemilikiKunci <|.. Pasien : realisasi
+    MemilikiKunci <|.. Dokter : realisasi
+    MemilikiKunci <|.. Kunjungan : realisasi
+    SortedList ..> MemilikiKunci : T extends
