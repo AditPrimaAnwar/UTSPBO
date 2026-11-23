@@ -4,12 +4,12 @@
 
 | | |
 |---|---|
-| Nama | Ahmad Raihan Al-Biruni |
+| Nama | Adit Prima Anwar |
 | NIM | 22315021 |
 | Kelas | ........ |
 | Topik | Klinik Rawat Jalan (digit terakhir NIM = **1**) |
 | Jenis ADT | Sorted List / array terurut (digit kedua dari belakang = **2**, 2 mod 3 = **2**) |
-| Repositori GitHub | https://github.com/......../UTS-POO_22315021_AhmadRaihanAlBiruni |
+| Repositori GitHub | https://github.com/......../UTS-POO_22315021_AditPrimaAnwar |
 | Hash commit terakhir | ........ |
 | Dosen | Muhammad Avied Bachmid, S.Kom., M.Kom. |
 | Tahun | 2026 |
@@ -316,7 +316,7 @@ Input uji disimpan di folder `tests/uji*.txt`, dan keluarannya di `tests/hasil_u
 
 | No | Skenario | Input | Hasil yang diharapkan | Hasil aktual | Status |
 |---|---|---|---|---|---|
-| 1 | Normal: tambah pasien | P004, Ahmad Raihan, 20 th | Pasien masuk dan list tetap urut | `[OK] Pasien berhasil ditambahkan`, P004 tampil di index 3 di antara P003 dan P005 | Lulus |
+| 1 | Normal: tambah pasien | P004, Adit Prima, 20 th | Pasien masuk dan list tetap urut | `[OK] Pasien berhasil ditambahkan`, P004 tampil di index 3 di antara P003 dan P005 | Lulus |
 | 2 | Normal: buat kunjungan | P004 → D001, hari ini, "Demam dan batuk" | K0001 dibuat, biaya Rp50.000 | `[OK] Kunjungan K0001 dibuat. Biaya konsultasi: Rp50.000, sisa kuota 4` | Lulus |
 | 3 | Normal: selesaikan dan laporan | K0001, obat 25000 | Total Rp75.000, pendapatan Rp75.000 | `K0001 SELESAI ... = Rp75.000`; laporan `Total pendapatan : Rp75.000` | Lulus |
 | 4 | Normal: potongan BPJS | P001 (BPJS) → D002 tarif 75.000 | Biaya Rp37.500 | `Biaya konsultasi: Rp37.500` | Lulus |
@@ -366,7 +366,7 @@ ADT Sorted List menjaga data selalu terurut sehingga pencarian berdasarkan kode 
 
 **Pernyataan orisinalitas**
 
-Saya yang bertanda tangan di bawah ini, nama: Ahmad Raihan Al-Biruni, NIM: 22315021, menyatakan bahwa project
+Saya yang bertanda tangan di bawah ini, nama: Adit Prima Anwar, NIM: 22315021, menyatakan bahwa project
 UTS Pemrograman Berorientasi Objek ini adalah hasil karya saya sendiri. Sumber rujukan dan bantuan alat telah saya
 cantumkan. Saya bersedia menerima sanksi akademik apabila pernyataan ini tidak benar.
 

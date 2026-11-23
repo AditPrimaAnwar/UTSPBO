@@ -2,7 +2,7 @@
 
 | | |
 |---|---|
-| Nama | Ahmad Raihan Al-Biruni |
+| Nama | Adit Prima Anwar |
 | NIM | 22315021 |
 | Mata Kuliah | Object Oriented Programming |
 | Dosen | Muhammad Avied Bachmid, S.Kom., M.Kom. |
