@@ -1,0 +1,39 @@
+abc
+15
+1
+
+P020
+
+Budi
+dua puluh
+20
+
+abc
+mungkin
+y
+1
+X12
+Coba Kode Salah
+20
+
+
+t
+3
+D009
+dr. Coba
+Umum
+lima puluh ribu
+-5000
+10
+5
+P001
+D001
+23-11-2026
+
+Pusing
+6
+2
+K0001
+seribu
+-100
+0

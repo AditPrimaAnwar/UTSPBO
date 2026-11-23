@@ -1,0 +1,29 @@
+10
+1
+P004
+Ahmad Raihan
+20
+Jl. Lepo-Lepo
+085211112222
+t
+2
+4
+t
+5
+P004
+D001
+
+Demam dan batuk
+5
+P001
+D002
+2026-12-01
+Sakit gigi
+6
+2
+K0001
+25000
+6
+1
+9
+0

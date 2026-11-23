@@ -1,0 +1,67 @@
+10
+1
+P010
+Tes Umur
+130
+
+
+t
+5
+P001
+D001
+2026-12-01
+Kontrol 1
+5
+P002
+D001
+2026-12-01
+Kontrol 2
+5
+P003
+D001
+2026-12-01
+Kontrol 3
+5
+P005
+D001
+2026-12-01
+Kontrol 4
+5
+P001
+D001
+2026-12-01
+Kontrol 5
+5
+P002
+D001
+2026-12-01
+Kontrol 6
+5
+P002
+D003
+2026-12-01
+Demam
+1
+P001
+Pasien Duplikat
+30
+
+
+t
+6
+3
+K0001
+6
+2
+K0001
+10000
+5
+P002
+D001
+2026-12-01
+Kontrol 6 setelah ada yang batal
+8
+2
+P002
+9
+0

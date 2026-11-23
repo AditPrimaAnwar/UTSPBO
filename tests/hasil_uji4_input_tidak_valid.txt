@@ -1,0 +1,131 @@
+Selamat datang di sistem Klinik Sehat Sentosa | Jl. Ahmad Yani No. 10, Kendari | Telp: 0401123456
+
+================ MENU KLINIK RAWAT JALAN ================
+ 1. Tambah pasien
+ 2. Tampilkan semua pasien
+ 3. Tambah dokter
+ 4. Tampilkan semua dokter
+ 5. Buat kunjungan (pendaftaran berobat)
+ 6. Kelola kunjungan (tampilkan / selesaikan / batalkan)
+ 7. Cari data (kode atau nama)
+ 8. Operasi ADT Sorted List (data pasien)
+ 9. Laporan ringkas
+10. Muat data contoh
+ 0. Keluar
+=========================================================
+Pilih menu:   [!] Input harus berupa angka bulat, silakan ulangi.
+Pilih menu:   [!] Pilihan harus antara 0 dan 10.
+Pilih menu: 
+--- Tambah Pasien ---
+Kode pasien (contoh P001):   [!] Input tidak boleh kosong, silakan ulangi.
+Kode pasien (contoh P001): Nama pasien     :   [!] Input tidak boleh kosong, silakan ulangi.
+Nama pasien     : Umur (tahun)    :   [!] Input harus berupa angka bulat, silakan ulangi.
+Umur (tahun)    : Alamat (boleh kosong)  : No. telepon (boleh kosong): Peserta BPJS? (y/t):   [!] Jawab dengan y atau t.
+Peserta BPJS? (y/t): [GAGAL] Nomor telepon harus 8-15 digit angka, contoh: 081234567890
+
+================ MENU KLINIK RAWAT JALAN ================
+ 1. Tambah pasien
+ 2. Tampilkan semua pasien
+ 3. Tambah dokter
+ 4. Tampilkan semua dokter
+ 5. Buat kunjungan (pendaftaran berobat)
+ 6. Kelola kunjungan (tampilkan / selesaikan / batalkan)
+ 7. Cari data (kode atau nama)
+ 8. Operasi ADT Sorted List (data pasien)
+ 9. Laporan ringkas
+10. Muat data contoh
+ 0. Keluar
+=========================================================
+Pilih menu: 
+--- Tambah Pasien ---
+Kode pasien (contoh P001): Nama pasien     : Umur (tahun)    : Alamat (boleh kosong)  : No. telepon (boleh kosong): Peserta BPJS? (y/t): [GAGAL] Kode pasien harus berformat P + 3 angka, contoh: P001
+
+================ MENU KLINIK RAWAT JALAN ================
+ 1. Tambah pasien
+ 2. Tampilkan semua pasien
+ 3. Tambah dokter
+ 4. Tampilkan semua dokter
+ 5. Buat kunjungan (pendaftaran berobat)
+ 6. Kelola kunjungan (tampilkan / selesaikan / batalkan)
+ 7. Cari data (kode atau nama)
+ 8. Operasi ADT Sorted List (data pasien)
+ 9. Laporan ringkas
+10. Muat data contoh
+ 0. Keluar
+=========================================================
+Pilih menu: 
+--- Tambah Dokter ---
+Kode dokter (contoh D001): Nama dokter     : Spesialis (kosong = Umum): Tarif konsultasi:   [!] Input harus berupa angka (contoh: 50000), silakan ulangi.
+Tarif konsultasi: [GAGAL] Tarif konsultasi harus lebih dari 0
+
+================ MENU KLINIK RAWAT JALAN ================
+ 1. Tambah pasien
+ 2. Tampilkan semua pasien
+ 3. Tambah dokter
+ 4. Tampilkan semua dokter
+ 5. Buat kunjungan (pendaftaran berobat)
+ 6. Kelola kunjungan (tampilkan / selesaikan / batalkan)
+ 7. Cari data (kode atau nama)
+ 8. Operasi ADT Sorted List (data pasien)
+ 9. Laporan ringkas
+10. Muat data contoh
+ 0. Keluar
+=========================================================
+Pilih menu: 
+[OK] 7 data contoh ditambahkan (data dengan kode yang sudah ada dilewati).
+
+================ MENU KLINIK RAWAT JALAN ================
+ 1. Tambah pasien
+ 2. Tampilkan semua pasien
+ 3. Tambah dokter
+ 4. Tampilkan semua dokter
+ 5. Buat kunjungan (pendaftaran berobat)
+ 6. Kelola kunjungan (tampilkan / selesaikan / batalkan)
+ 7. Cari data (kode atau nama)
+ 8. Operasi ADT Sorted List (data pasien)
+ 9. Laporan ringkas
+10. Muat data contoh
+ 0. Keluar
+=========================================================
+Pilih menu: 
+--- Buat Kunjungan ---
+Kode pasien : Kode dokter : Tanggal [yyyy-mm-dd, kosong = hari ini]:   [!] Format tanggal salah. Contoh yang benar: 2026-11-23
+Tanggal [yyyy-mm-dd, kosong = hari ini]: Keluhan     : [OK] Kunjungan K0001 dibuat. Biaya konsultasi: Rp25.000 | Sisa kuota dr. Andi Pratama hari itu: 4
+
+================ MENU KLINIK RAWAT JALAN ================
+ 1. Tambah pasien
+ 2. Tampilkan semua pasien
+ 3. Tambah dokter
+ 4. Tampilkan semua dokter
+ 5. Buat kunjungan (pendaftaran berobat)
+ 6. Kelola kunjungan (tampilkan / selesaikan / batalkan)
+ 7. Cari data (kode atau nama)
+ 8. Operasi ADT Sorted List (data pasien)
+ 9. Laporan ringkas
+10. Muat data contoh
+ 0. Keluar
+=========================================================
+Pilih menu: 
+--- Kelola Kunjungan ---
+1. Tampilkan semua kunjungan
+2. Selesaikan kunjungan (input biaya obat)
+3. Batalkan kunjungan
+0. Kembali
+Pilih: Kode kunjungan: Biaya obat    :   [!] Input harus berupa angka (contoh: 50000), silakan ulangi.
+Biaya obat    : [GAGAL] Biaya obat tidak boleh negatif
+
+================ MENU KLINIK RAWAT JALAN ================
+ 1. Tambah pasien
+ 2. Tampilkan semua pasien
+ 3. Tambah dokter
+ 4. Tampilkan semua dokter
+ 5. Buat kunjungan (pendaftaran berobat)
+ 6. Kelola kunjungan (tampilkan / selesaikan / batalkan)
+ 7. Cari data (kode atau nama)
+ 8. Operasi ADT Sorted List (data pasien)
+ 9. Laporan ringkas
+10. Muat data contoh
+ 0. Keluar
+=========================================================
+Pilih menu: 
+Terima kasih. Program selesai.

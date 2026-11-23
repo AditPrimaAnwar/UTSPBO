@@ -1,0 +1,86 @@
+8
+6
+8
+2
+P001
+8
+4
+8
+3
+P001
+6
+2
+K0001
+1000
+10
+1
+P009
+Nur Aisyah
+30
+
+
+t
+1
+P006
+Muh. Fadli
+45
+
+
+y
+1
+P008
+Andi Rezky
+19
+
+
+t
+1
+P007
+Dewi Lestari
+33
+
+
+t
+1
+P010
+Irfan Maulana
+50
+
+
+t
+1
+P011
+Pasien Kesepuluh
+22
+
+
+t
+1
+P012
+Pasien Kesebelas
+28
+
+
+t
+8
+5
+8
+6
+8
+3
+P007
+8
+3
+P099
+8
+4
+99
+8
+4
+0
+8
+2
+P003
+8
+6
+0
